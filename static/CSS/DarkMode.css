@@ -7,7 +7,8 @@ body.dark .Padinputs {
 }
 
 body.dark .post-card {
-  border: 1px solid rgba(105, 92, 254, 0.4);
+  border: 1px solid rgba(105, 92, 254, 0.77);
+  background-color: #1f0242;
 }
 
 body.dark .formbars button {

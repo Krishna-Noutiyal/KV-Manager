@@ -4,7 +4,7 @@ from cryptography.fernet import Fernet
 import json
 import pymysql as sql
 
-from FetchContent import Get_News, Get_Newses, Get_Event, Get_Events, Get_Classwork
+from FetchContent import Get_News, Get_Newses, Get_Event, Get_Events, Get_Classwork, Get_Homework
 
 app = Flask(__name__)
 app.secret_key = "SecretKey"
@@ -394,12 +394,14 @@ def Classwork():
 
 @app.route("/Homework", methods=["GET", "POST"])
 def Homework():
-    return render_template("Homework.html")
+    Work = Get_Homework()
+
+    return render_template("Homework.html", Length=len(Work), Content=Work)
 
 
 @app.route("/T_Console", methods=["GET", "POST"])
 def T_Console():
-    return render_template("T_Console.html")
+    return render_template("T_Console.html", Cnt=Get_Newses())
 
 
 @app.route("/Post/<NewsOrPost>/<SerialNo>", methods=["GET", "POST"])

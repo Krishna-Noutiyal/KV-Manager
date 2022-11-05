@@ -34,7 +34,7 @@ def sql(query):
     # Closing the connection
     Db.close()
 
-    return Fetch
+    return list(Fetch)
 
 
 def Get_News(Sr="sr", Class= "Class", Teacher= "Teacher"):
@@ -81,4 +81,8 @@ def Get_Events():
 def Get_Classwork():
     lst = sql("Select * from classwork;")
 
+    return lst
+
+def Get_Homework():
+    lst = sql("Select * from classwork;")
     return lst

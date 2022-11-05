@@ -1,32 +1,98 @@
 {% extends "Base.html" %}
 
-
 <!-- Head -->
 {% block head %}
-    <title>
-        Teacher's Console
-    </title>
+<title>Teacher's Console</title>
 {% endblock %}
-
 
 <!-- Header Content -->
 {% block header %}
 <div class="text">Teacher's Console!!</div>
 {% endblock %}
 
-
 <!-- Body Content -->
 
 {% block Content %}
-    <div class="container">
-        <div class="row SecText">
-             Teacher Console
+<div class="container-fluid SecText">
+  <div class="row gy-5 gap-lg-0 justify-content-center">
+    <div class="col-xl-4 col-lg-6">
+      <div class="p-4 shadow rounded post-card">
+        <div
+          class="hover-zoom Img-container shadow mw-40 d-flex justify-content-center"
+        >
+          <a href="">
+            <img
+              class="img-fluid"
+              src="{{url_for('static', filename='Images/Post-Img/Holiday.jpg')}}"
+              alt="Image Not Found"
+              srcset=""
+            />
+          </a>
         </div>
-    </div>
-{% endblock %}
 
+        <div class="Post-Context blockquote SecText text-center d-none">
+          <a
+            href="{{url_for('static', filename='Images/Post-Img/Holiday.jpg')}}"
+            class="d-text">
+            <h2 class="mt-4 Post-Heading">Give Homework</h2>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-lg-6">
+      <div class="p-4 shadow rounded post-card">
+        <div
+          class="hover-zoom Img-container shadow mw-40 d-flex justify-content-center"
+        >
+          <a href="">
+            <img
+              class="img-fluid"
+              src="{{url_for('static', filename='Images/Post-Img/Holiday.jpg')}}"
+              alt="Image Not Found"
+              srcset=""
+            />
+          </a>
+        </div>
+
+        <div class="Post-Context blockquote SecText text-center d-none">
+          <a
+            href="{{url_for('static', filename='Images/Post-Img/Sports-day.jpg')}}"
+            class="d-text">
+            <h2 class="mt-4 Post-Heading">Give Homework</h2>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-lg-6">
+      <div class="p-4 shadow rounded post-card">
+        <div
+          class="hover-zoom Img-container shadow mw-40 d-flex justify-content-center"
+        >
+          <a href="">
+            <img
+              class="img-fluid"
+              src="{{url_for('static', filename='Images/Logo.jpg')}}"
+              alt="Image Not Found"
+              srcset=""
+            />
+          </a>
+        </div>
+
+        <div class="Post-Context blockquote SecText text-center d-none">
+          <a
+            href="{{url_for('static', filename='Images/Post-Img/Holiday.jpg')}}"
+            class="d-text">
+            <h2 class="mt-4 Post-Heading">Give Homework</h2>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
 
 <!-- Scripts -->
-{% block Script %}
-
-{% endblock %}
+{% block Script %} {% endblock %}
